@@ -39,22 +39,31 @@
 
             x = 5;
             console.log('The value of x before is ', x);
-            // x++;
+            // x++; // x = x + 1;
             // x = x + 1;
             x += 1;
             console.log('The value of x after is ', x);
 
             //Added this comment for testing
 
-            // for(let i = 0; i < 100; i++){
-            //     console.log('The value of i is ' + i)
-            // }
+            for(let i=1;i<=14; i++){
+                console.log(i)
+            }
 
+            function calculateSum(){
+                var total = 0
+                console.log('Total')
+                for(i=1;i<=100; i = i + 1){
+                    total = total + i
+                console.log('Total value inside', total)
+
+                }
+            }
 
             //I am a new developer. I am making these code changes in my dev branch only
         </script>
     </head>
     <body>
-        
+       <button onclick="calculateSum()">Calculate the Sum</button> 
     </body>
 </html>
