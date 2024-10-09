@@ -1,0 +1,62 @@
+<html>
+    <head>
+        <title>
+            Javascript
+        </title>
+    </head>
+    <script>
+        x = 3;
+        console.log('The value of x is = ' + x)
+        x = x + 1;
+        console.log('after x = x + 1 the value is = ' + x);
+
+        x +=1;//other way of writing x = x + 1;
+        
+        console.log('after x +=1 the value is = ' + x);
+
+        console.log('Before = ' + x);
+        x++;
+        console.log('After = ' + x);
+
+        console.log('Before = ++x' + x);
+        ++x;
+        console.log('After = ++x' + x);
+
+
+        var sum = 0;
+        for(let i=1; i<=5; i++){
+            sum = sum + i;
+            console.log('The value of i', i)
+            console.log('The value of sum', sum)
+        }
+
+        var students = [
+            'Mihir', 'Deepika', 'Darcey', 'Judith'
+        ];
+
+        for(i=0; i<students.length; i=i+1){
+            helloStudents(students[i]);
+        }
+
+        function showName(){
+            var first_name = document.getElementById('first_name').value;
+            var hours = document.getElementById('hours').value;
+            var rate = document.getElementById('rate').value;
+            console.log('Your name is ' + first_name + ' your salary is ' + hours * rate);
+        }
+
+        function helloStudents(name){
+            console.log('Hello ' + name);
+        }
+
+
+    </script>
+    <body>
+        <!-- Add a input field to display number of hours entered in the input inside the showName() function 
+        Add a input field to enter your current wage rate and display it inside the showName() function -->
+       Name <input type="text" name="first_name" id="first_name"><br>
+       Num of hour <input type="number" name="hours" id="hours"><br>
+       Hourly Rate <input type="text" name="rate" id="rate"><br>
+       <button onclick="showName()">Show Name</button>
+    </body>
+</html>
