@@ -1,0 +1,7 @@
+@media only screen and (min-width: 460px){
+    .header, .para  {
+        background-color: pink;
+        color: green;
+        font-size: 28px;
+    }
+}

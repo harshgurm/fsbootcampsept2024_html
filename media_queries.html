@@ -1,0 +1,59 @@
+<html>
+    <head>
+        <title>Media Queries</title>
+        <meta name="viewport" content="width=device-width" initial-scale="1.0">
+        <!-- <link rel="stylesheet" media='screen and (min-width:768px)' href="desktop.css"> -->
+        <link rel="stylesheet" href="desktop.css">
+        <link rel="stylesheet" href="tablet.css">
+        <link rel="stylesheet" href="mobile.css">
+    </head>
+    <style>
+
+        @media print {
+            body {
+                background-color: pink;
+                color:aqua;
+            }
+        }
+        /* create classes on h1 and p tag
+        apply css background color, color, font size to these classes based on different screens. */
+        @media screen, print {
+            .para {
+                background-color: lightgreen;
+                color:blue;
+            }
+        }
+
+        /* @media (max-height: 960px) {
+            body {
+                background-color: greenyellow;
+                color: red;
+            }
+        }
+
+        @media (min-height: 960px) {
+            body {
+                background-color: lightblue;
+                background-color: red;
+            }
+        }
+
+        /* @media (orientation: portrait) and (min-width:500px) {
+            body {
+                background-color: burlywood;
+                color: black;
+            }
+        }
+        
+        @media (orientation: landscape) {
+            body {
+                background-color:chartreuse;
+                color: white;
+            }
+        } */
+    </style>
+    <body>
+        <h1 class="header">This is my heading</h1>
+        <p class="para">This is my paragraph</p>
+    </body>
+</html>

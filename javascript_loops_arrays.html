@@ -44,6 +44,28 @@
             // var sliced_students = students.slice(1,3);
             // console.log(sliced_students);
 
+            //switch case example
+            var z = 100;
+            var msg = "";
+            switch(true){
+                case (z > 100): {
+                    msg = "The value of z is greater than 100";
+                    break;
+                }
+                case (z <= 100): {
+                    msg = "The value of z is less than 100";
+                    break;
+                }
+                case (z == 100): {
+                    msg = "The value of z is 100";
+                    break;
+                }
+                default: {
+                    msg = "The condition doesn't match";
+                }
+            }
+            console.log(msg);
+
         </script>
     </head>
     <body>
