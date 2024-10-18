@@ -1,0 +1,42 @@
+<html>
+    <head>
+        <title>Grids</title>
+    </head>
+    <style>
+        .grid-container {
+            display: inline-grid;
+            grid-template-columns: 100px 150px auto;
+            background-color: lightblue;
+            gap: 8px;
+            text-align: center;
+            font-size: 40px;       
+        }
+        div {
+            background-color: yellow;
+        }
+
+        .first {
+            grid-column-start: 1;
+            grid-column-end: 4;
+        }
+
+        .second {
+            grid-row-start: 2;
+            grid-row-end: 5;
+        }
+
+    </style>
+    <body>
+        <div class="grid-container">
+            <div class="first">1</div>
+            <div class="second">2</div>
+            <div>3</div>
+            <div>This is to add more content for this tag</div>
+            <div>5</div>
+            <div>6</div>
+            <div>7</div>
+            <div>8</div>
+            <div>9</div>
+        </div>
+    </body>
+</html>

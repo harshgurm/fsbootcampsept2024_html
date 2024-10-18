@@ -3,14 +3,39 @@
         <title>Grids</title>
     </head>
     <style>
+        .grid-container {
+            display: inline-grid;
+            grid-template-columns: auto auto auto;
+            background-color: yellow;
+            gap:5px;
+            text-align: center;
+            font-size: 30px;
+        }
+        .grid-container > div {
+            background-color: pink;
+            border: 1px solid red;
+        }
+        .first {
+            grid-column-start:1;
+            grid-column-end:5;
+        }
+        .second {
+            grid-row-start: 2;
+            grid-row-end: 5;
+        }
+
     </style>
     <body>
         <div class="grid-container">
-            <div>1</div>
-            <div>2</div>
-            <div>3</div>
+            <div class="first">This is my grid and you will see the width will increase based on the content size adding more to show you how it is going to increase the size</div>
+            <div class="second">Same thing you will notice here</div>
+            <div>and so on</div>
             <div>4</div>
             <div>5</div>
+            <div>6</div>
+            <div>7</div>
+            <div>8</div>
+            <div>9</div>
         </div>
     </body>
 </html>
