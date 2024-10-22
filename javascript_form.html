@@ -1,0 +1,42 @@
+<html>
+    <head>
+        <title>Form Example</title>
+        <script>
+            function validate(){
+                //impement the logic to validate the input values.
+                document.getElementsByClassName('first_name_err')[0].style.display = 'none';
+                document.getElementsByClassName('pass_err')[0].style.display = 'none';
+                var fname = document.getElementById('first_name').value;
+                var pass = document.getElementById('password').value;
+
+                if(fname == ""){
+                    document.getElementsByClassName('first_name_err')[0].style.display = 'inline';
+                }
+
+                if(pass == ""){
+                    document.getElementsByClassName('pass_err')[0].style.display = 'inline';
+                }
+                if(fname != '' && pass !=''){
+                    document.getElementById('myForm').submit();
+                }
+            }
+        </script>
+        <style>
+            .first_name_err, .pass_err{
+                color:red;
+                display: none;    
+            }
+        </style>
+    </head>
+    <body>
+        <form id="myForm" action="index.php">
+            First Name <input type="text" name="first_name" id="first_name"><br>
+            <span class="first_name_err">First Name is required</span><br>
+            Password <input type="password" name="password" id="password"><br>
+            <span class="pass_err">Password is required</span><br>
+            Age <input type="number" name="age"><br>
+            <input type="button" onclick="validate()" value="Submit">
+        </form>
+    </body>
+
+</html>

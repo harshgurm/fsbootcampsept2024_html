@@ -1,0 +1,33 @@
+<html>
+    <head>
+        <title>JavaScript</title>
+        
+    </head>
+    <body>
+        <button onclick="changeImage('https://media.istockphoto.com/id/499650202/photo/road-in-mountains.jpg?s=1024x1024&w=is&k=20&c=eslVTiE8R4oOwC6Mc3SEv7hEzMP7VtH3nThdrQs1T90=')">Road View</button>
+        <button onclick="changeImage('https://cdn.pixabay.com/photo/2023/11/07/06/52/forest-8371211_1280.jpg')">Fall View</button>
+        
+        
+        <button onclick="toggleImage()">Toggle View</button>
+
+        <div>
+            <img id="my_img" src="https://cdn.pixabay.com/photo/2023/11/07/06/52/forest-8371211_1280.jpg" alt="">
+        </div>
+    </body>
+    <script>
+        
+        function changeImage(image_url) {
+            document.getElementById('my_img').src = image_url; 
+        }
+
+        function toggleImage(){
+            var curr_img = document.getElementById('my_img').src;
+            if(curr_img.includes('forest')){
+                document.getElementById('my_img').src = "https://media.istockphoto.com/id/499650202/photo/road-in-mountains.jpg?s=1024x1024&w=is&k=20&c=eslVTiE8R4oOwC6Mc3SEv7hEzMP7VtH3nThdrQs1T90=";
+            } else {
+                document.getElementById('my_img').src = "https://cdn.pixabay.com/photo/2023/11/07/06/52/forest-8371211_1280.jpg";
+            }
+        }
+        
+    </script>
+</html>
