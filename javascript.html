@@ -1,65 +1,72 @@
 <html>
-    <head>
-        <title>JavaScript</title>
-        <style>
-            .add_bg {
-                color: red;
-                background-color: yellow;
-                font-size: 40px;
-                font-family: Arial;
-            }
-        </style>
-    </head>
-    <body>
-        <h1>This is my heading 1</h1>
-        <h2 class="my_class">This is my heading 2</h2>
-        <h3 id="my_id">This is my heading 3</h3>
-        <h4 id="head">This is my heading 4</h4>
-        <p class="my_class">This will be in an array</p>
-        <h2 class="my_class">This is another heading that we are going to change</h2>
-        <button onclick="changeImage()">Change Image</button>
-        <button onclick="originalImage()">Fall View</button>
-        <div>
-            <img id="my_img" src="https://cdn.pixabay.com/photo/2023/11/07/06/52/forest-8371211_1280.jpg" alt="">
-        </div>
-    </body>
+
+<head>
+    <title>JavaScript</title>
+    <style>
+        .add_bg {
+            color: red;
+            background-color: yellow;
+            font-size: 40px;
+            font-family: Arial;
+        }
+    </style>
+
     <script>
-        // selecting elements based on the id
-        document.getElementById('my_id').innerHTML = "<h2>This is my id</h2>";
-        document.getElementById('head').innerText = "<h2>This is my id</h2>";
+        window.onload = function () {
+            // selecting elements based on the id
+            document.getElementById('my_id').innerHTML = "<h2>This is my id</h2>";
+            document.getElementById('head').innerText = "<h2>This is my id</h2>";
 
-        //selecting elments based on the class name
-        var class_elem = document.getElementsByClassName('my_class');
-        class_elem[0].innerHTML = "<h1>This heading is changed as well </h2>";
-        // Change its text "this is the heading that got changed" on the basis of its class
-        var my_class_var = document.getElementsByClassName('my_class');
-        my_class_var[2].innerHTML = "<p>This is a paragraph tag</p>";
+            //selecting elments based on the class name
+            var class_elem = document.getElementsByClassName('my_class');
+            class_elem[0].innerHTML = "<h1>This heading is changed as well </h2>";
+            // Change its text "this is the heading that got changed" on the basis of its class
+            var my_class_var = document.getElementsByClassName('my_class');
+            my_class_var[2].innerHTML = "<p>This is a paragraph tag</p>";
 
 
-        //selecting elements based on the tag name
-        var elem_h2 = document.getElementsByTagName('h2')[0].style.backgroundColor ='red';
-        var elem_h2 = document.getElementsByTagName('h2')[1].style.color ='red';
+            //selecting elements based on the tag name
+            var elem_h2 = document.getElementsByTagName('h2')[0].style.backgroundColor = 'red';
+            var elem_h2 = document.getElementsByTagName('h2')[1].style.color = 'red';
 
-        // apply the background color to be yellow
-        // where the element has id my_id
-        document.getElementById('my_id').style.color = "red";
-        document.getElementById('my_id').style.backgroundColor = "yellow";
-        document.getElementById('my_id').style.fontSize = "40px";
-        document.getElementById('my_id').style.fontFamily = "Arial";
+            // apply the background color to be yellow
+            // where the element has id my_id
+            document.getElementById('my_id').style.color = "red";
+            document.getElementById('my_id').style.backgroundColor = "yellow";
+            document.getElementById('my_id').style.fontSize = "40px";
+            document.getElementById('my_id').style.fontFamily = "Arial";
 
-        document.getElementById('head').className = 'add_bg';
-        
-        function changeImage() {
-            document.getElementById('my_img').src = "https://media.istockphoto.com/id/499650202/photo/road-in-mountains.jpg?s=1024x1024&w=is&k=20&c=eslVTiE8R4oOwC6Mc3SEv7hEzMP7VtH3nThdrQs1T90=";
+            document.getElementById('head').className = 'add_bg';
+
+            function changeImage() {
+                document.getElementById('my_img').src = "https://media.istockphoto.com/id/499650202/photo/road-in-mountains.jpg?s=1024x1024&w=is&k=20&c=eslVTiE8R4oOwC6Mc3SEv7hEzMP7VtH3nThdrQs1T90=";
+            }
+
+            function originalImage() {
+                document.getElementById('my_img').src = "https://cdn.pixabay.com/photo/2023/11/07/06/52/forest-8371211_1280.jpg";
+            }
         }
 
-        function originalImage() {
-            document.getElementById('my_img').src = "https://cdn.pixabay.com/photo/2023/11/07/06/52/forest-8371211_1280.jpg";
-        }
 
         // add a Button name it Fall View
         // on click of that button change back the image to falls one
-        
+
 
     </script>
+</head>
+
+<body>
+    <h1>This is my heading 1</h1>
+    <h2 class="my_class">This is my heading 2</h2>
+    <h3 id="my_id">This is my heading 3</h3>
+    <h4 id="head">This is my heading 4</h4>
+    <p class="my_class">This will be in an array</p>
+    <h2 class="my_class">This is another heading that we are going to change</h2>
+    <button onclick="changeImage()">Change Image</button>
+    <button onclick="originalImage()">Fall View</button>
+    <div>
+        <img id="my_img" src="https://cdn.pixabay.com/photo/2023/11/07/06/52/forest-8371211_1280.jpg" alt="">
+    </div>
+</body>
+
 </html>

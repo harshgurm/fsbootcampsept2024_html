@@ -1,0 +1,43 @@
+<html>
+    <head>
+        <title>Form Example</title>
+        <script>
+            function validate(){
+                
+                var fname = document.forms['myForm']['first_name'].value;
+                var pass = document.forms['myForm']['password'].value;
+
+                if(fname == ""){
+                    var elem = document.createElement('div');
+                    elem.innerHTML = "<span style='color:red'> Please provide a first name </span>";
+                    document.getElementById('fname').appendChild(elem);
+
+                }
+                
+
+                if(pass == ""){
+                    document.getElementById('pass_error').innerText = "Please provide a password";
+                }
+                
+                if(fname != '' && pass !=''){
+                    document.getElementById('myForm').submit();
+                }
+            }
+        </script>
+    </head>
+    <body>
+        
+        <form id="myForm" action="index.php">
+            <div id="fname">
+                First Name <input type="text" name="first_name" id="first_name"><br>
+            </div>
+            <div id="pwd">
+                Password <input type="password" name="password" id="password"><br>
+                <span id="pass_error" style="color:red"></span>
+            </div>
+            Age <input type="number" name="age"><br>
+            <input type="button" onclick="validate()" value="Submit">
+        </form>
+    </body>
+
+</html>

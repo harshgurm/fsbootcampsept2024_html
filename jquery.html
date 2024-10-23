@@ -1,0 +1,100 @@
+<html>
+    <head>
+        <title>JQuery</title>
+        <!-- Jquery library to be included in order for jquery to work -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+        <style>
+            .header {
+                background-color: yellow;
+                color:aqua;
+                font-size: 30px;
+                padding: 30px;
+            }
+        </style>
+        <script>
+            // This is the javascript way of saying only load 
+            // once the html is loaded
+            // window.onload = function () {}
+
+            // jquery way
+            $(document).ready(function() {
+                
+                // selecting elements based on tag
+                // document.getElementsByTagName('h1')[0].html('Change the heading to paragraph'); 
+                $('h1').html('Change the heading to paragraph');
+
+
+                // selecting elements based on id
+                // document.getElementById('para_1')
+                $('#para_1').text('This will just change the text of p tag. The above one will apply html effect/styles as well. This one is treating html as text')
+
+                //example of applying css based on an element's id
+                // document.getElementsByClassName('class_example')
+                $('.class_example').css('color','red');
+                $('p').css({"color":"red", "background-color": "yellow" , "font-size":"20px"});
+
+                //Task 1
+                //Apply css on div element
+                //Add background color to pink, color to green, font-size to be 15px
+                $('div').css({"color":"pink", "background-color": "green", "font-size": "15px", "height": "200px"})
+
+                //Task 2
+                // Create a paragraph element 
+                // change its text to be "This is my para"
+                //Make sure the text doesn't change on other paragraphs
+                $('.unique_para').text('This is my para');
+
+                //adding the css class to h3 tag
+                $('h3').addClass('header');
+
+                //remove the css class from h4 tag
+                $('h4').removeClass('header');
+
+                //when the button with id hide_para is clicked 
+                //hide all the paragraph elements
+                $('#hide_para').click(function (){
+                    $('p').hide();
+                });
+
+                //when the button with id show_para is clicked 
+                //show all the paragraph elements
+                $('#show_para').click(function (){
+                    $('p').show();
+                });
+
+                $('#hide_show').click(function (){
+                    $('p').toggle();
+                });
+
+                $('.change_text').click(function (){
+                    $('h1').text('Jquery is very powerful');
+                });
+
+                $('img').attr('src','https://cdn.pixabay.com/photo/2024/09/25/14/32/lighthouse-9073925_1280.png');
+                //Task change the h1 to Jquery is very powerful when a button name change heading is clicked.
+
+            })
+        </script>
+
+    </head>
+    <body>
+        <button id="hide_para">Hide Paragraph</button>
+        <button id="show_para">Show Paragraph</button>
+        <button class="change_text">Change Heading</button>
+        <button id="hide_show">Show/Hide Paragraph</button>
+        <h1>This is my heading 1 </h1>
+        <p id="para_1">This is my tag</p>
+        <p class="unique_para">This is my another p tag</p>
+        <p class="class_example">This is my 3rd tag</p>
+        <div>
+            This is a div
+        </div>
+        <div id="div_example">
+            <h3>This is my heading</h3>
+            <p>This is my para in the div</p>
+        </div>
+
+        <h4 class="header">This is my heading 4</h4>
+        <img src="" alt="Image Not Found">
+    </body>
+</html>
