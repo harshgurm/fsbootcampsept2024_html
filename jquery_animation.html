@@ -3,14 +3,43 @@
         <title>Animation</title>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
         <script>
-            // $(document).ready(function(){
-            //     $('.slider').sl
-            // })
+            $(document).ready(function(){
+                $('.show_slider').click( function() {
+                    $('.slider').slideToggle();
+                })
+
+                $('#move').click(function(){
+                    $('div').animate({left: '300px'})
+                })
+
+                $('input').focus(function (){
+                    $(this).css('background', 'yellow');
+                })
+
+                $('input').blur(function (){
+                    $(this).css('background', 'red');
+                })
+            })
         </script>
+        <style>
+            .slider {
+                padding:100px;
+                background-color: aqua;
+                /* display: none; */
+            }
+            div{
+                position: relative;
+            }
+        </style>
+
     </head>
     <body>
+        <button id="move">Move Div</button>
         <div>
+            <p class="show_slider">THis is my paragraph</p>
             <p class="slider">This is text</p>
+            Name: <input type="text">
         </div>
+
     </body>
 </html>

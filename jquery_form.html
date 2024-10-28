@@ -1,0 +1,40 @@
+<html></html>
+    <head>
+        <title>Animation</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+        <script>
+            $(document).ready(function(){
+
+                $('#submit_form').click(function(event){
+                    // javascript way of doing the same thing
+                    //var fname = document.getElementById('first_name').value;
+                    var fname = $('#first_name').val();
+                    var password = $('#password').val();
+
+                    if(fname == ''){
+                        $('#fname_err').show();
+                    }
+                    if(password == ''){
+                        $('#pass_err').show();
+                    }
+                    if(fname == '' || password == ''){
+                        event.preventDefault();
+                    }
+                })
+            })
+        </script>
+    </head>
+    <body>
+        <form action="">
+            <div>
+                First Name: <input type="text" id="first_name" name="first_name">
+                <span id="fname_err" style="color:red;display: none;">First Name is required</span>
+            </div>
+            <div>
+                Password: <input type="password" id="password" name="password">
+                <span id="pass_err" style="color:red; display: none;">Password is required</span>
+            </div>
+            <input type="submit" id="submit_form" value="Submit">
+        </form>
+    </body>
+</html>
